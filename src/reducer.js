@@ -1,4 +1,4 @@
-lastID = 0;
+let lastID = 0;
 
 const reducer = (state = [], action) => {
     switch (action.type) {
@@ -18,3 +18,5 @@ const reducer = (state = [], action) => {
             return state
     }
 }
+
+export default reducer;
