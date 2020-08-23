@@ -1,4 +1,7 @@
 import store from './store';
+import * as actions from './actionTypes'
+
+//* means import all
 
 // console.log("Hello World!");
 
@@ -7,7 +10,7 @@ const unsubscribe = store.subscribe(() => {
 })
 
 store.dispatch({
-    type: 'BUG_ADDED',
+    type: actions.BUG_ADDED,
     payload: {
         description: 'A new bug with the title of BUG1 was added'
     }
@@ -16,7 +19,7 @@ store.dispatch({
 unsubscribe();
 
 store.dispatch({
-    type : 'BUG_REMOVED',
+    type : actions.BUG_REMOVED,
     payload: {
         id: 1
     }
