@@ -2,7 +2,7 @@ import store from './store';
 
 // console.log("Hello World!");
 
-store.subscribe(() => {
+const unsubscribe = store.subscribe(() => {
     console.log('The store was updated', store.getState())
 })
 
@@ -12,6 +12,8 @@ store.dispatch({
         description: 'A new bug with the title of BUG1 was added'
     }
 })
+
+unsubscribe();
 
 store.dispatch({
     type : 'BUG_REMOVED',
