@@ -1,5 +1,5 @@
 import store from './store';
-import {bugAdded} from './actions';
+import {bugAdded, bugResolved} from './actions';
 //* means import all
 
 // console.log("Hello World!");
@@ -9,6 +9,7 @@ const unsubscribe = store.subscribe(() => {
 })
 
 store.dispatch(bugAdded('Bug 1 was added'));
+store.dispatch(bugResolved(1))
 
 unsubscribe();
 // store.dispatch({
