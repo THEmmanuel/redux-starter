@@ -33,3 +33,6 @@ const reducer = (store, action) => {
 
 
 }
+
+
+//Cirrying
